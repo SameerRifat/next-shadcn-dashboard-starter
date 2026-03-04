@@ -1,3 +1,4 @@
+// next.config.mjs
 import createNextIntlPlugin from 'next-intl/plugin';
 
 // next-intl plugin: auto-discovers i18n/request.js at the project root.
