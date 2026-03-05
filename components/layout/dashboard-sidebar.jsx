@@ -7,6 +7,7 @@ import {
     Bot,
     Command,
     Frame,
+    LayoutDashboard,
     LifeBuoy,
     Map,
     PieChart,
@@ -31,6 +32,7 @@ const data = {
         avatar: "/avatars/shadcn.jpg",
     },
     navMain: [
+        { title: "Dashboard", url: "/dashboard", icon: LayoutDashboard },
         {
             title: "Playground",
             url: "#",

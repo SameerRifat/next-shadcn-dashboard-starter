@@ -1,6 +1,7 @@
-// components/layout/nav-secondary.jsx
-import * as React from "react"
+"use client"
 
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 import {
     SidebarGroup,
     SidebarGroupContent,
@@ -10,17 +11,24 @@ import {
 } from "@/components/ui/sidebar"
 
 export function NavSecondary({ items, ...props }) {
+    const pathname = usePathname()
+
     return (
         <SidebarGroup {...props}>
             <SidebarGroupContent>
                 <SidebarMenu>
                     {items.map((item) => (
                         <SidebarMenuItem key={item.title}>
-                            <SidebarMenuButton asChild size="lg">
-                                <a href={item.url}>
+                            <SidebarMenuButton
+                                asChild
+                                size="lg"
+                                isActive={pathname === item.url}
+                                className='text-body-lg-regular'
+                            >
+                                <Link href={item.url}>
                                     <item.icon />
                                     <span>{item.title}</span>
-                                </a>
+                                </Link>
                             </SidebarMenuButton>
                         </SidebarMenuItem>
                     ))}

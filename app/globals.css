@@ -258,6 +258,138 @@
     font-weight: 600;
     line-height: 1.4;
   }
+
+  [data-slot="sidebar-container"] {
+    border-right: none !important;
+  }
+}
+
+@layer components {
+
+  /* Body 2XL */
+  .text-body-2xl-regular {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .text-body-2xl-medium {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .text-body-2xl-semibold {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .text-body-2xl-bold {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  /* Body XL */
+  .text-body-xl-regular {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .text-body-xl-medium {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .text-body-xl-semibold {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .text-body-xl-bold {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  /* Body LG */
+  .text-body-lg-regular {
+    font-size: 16px !important;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .text-body-lg-medium {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .text-body-lg-semibold {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .text-body-lg-bold {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  /* Body MD */
+  .text-body-md-regular {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .text-body-md-medium {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .text-body-md-semibold {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .text-body-md-bold {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  /* Body SM */
+  .text-body-sm-regular {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  .text-body-sm-medium {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+
+  .text-body-sm-semibold {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+  }
+
+  .text-body-sm-bold {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+  }
 }
 
 /* @import "tailwindcss";

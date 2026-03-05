@@ -1,13 +1,8 @@
-// components/layout/nav-tools.jsx
 "use client"
 
-import {
-    Folder,
-    MoreHorizontal,
-    Share,
-    Trash2,
-} from "lucide-react"
-
+import { Folder, MoreHorizontal, Share, Trash2 } from "lucide-react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -27,6 +22,7 @@ import {
 
 export function NavTools({ projects }) {
     const { isMobile } = useSidebar()
+    const pathname = usePathname()
 
     return (
         <SidebarGroup className="group-data-[collapsible=icon]:hidden">
@@ -34,11 +30,16 @@ export function NavTools({ projects }) {
             <SidebarMenu>
                 {projects.map((item) => (
                     <SidebarMenuItem key={item.name}>
-                        <SidebarMenuButton asChild size="lg">
-                            <a href={item.url}>
+                        <SidebarMenuButton
+                            asChild
+                            size="lg"
+                            isActive={pathname === item.url}
+                            className='text-body-lg-regular'
+                        >
+                            <Link href={item.url}>
                                 <item.icon />
                                 <span>{item.name}</span>
-                            </a>
+                            </Link>
                         </SidebarMenuButton>
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
@@ -70,7 +71,7 @@ export function NavTools({ projects }) {
                     </SidebarMenuItem>
                 ))}
                 <SidebarMenuItem>
-                    <SidebarMenuButton>
+                    <SidebarMenuButton className='text-body-lg-regular'>
                         <MoreHorizontal />
                         <span>More</span>
                     </SidebarMenuButton>

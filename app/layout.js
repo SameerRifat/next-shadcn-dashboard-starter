@@ -1,5 +1,5 @@
 // app/layout.js
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Urbanist } from "next/font/google"
 import "./globals.css";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/providers/theme-provider";
@@ -8,15 +8,16 @@ import { getLocale, getMessages } from "next-intl/server"
 import { getDirection } from "@/i18n/request";
 import { NextIntlClientProvider } from "next-intl";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const urbanist = Urbanist({
+  variable: "--font-urbanist",
   subsets: ["latin"],
-});
+  weight: ["400", "500", "600", "700"],
+})
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -31,7 +32,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang={locale} dir={dir} suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${urbanist.className} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"

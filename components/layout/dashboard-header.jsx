@@ -15,7 +15,7 @@ export function DashboardHeader() {
     const t = useTranslations("DashboardHeader")
 
     return (
-        <header className="sticky top-0 z-50 flex items-center bg-sidebar w-full">
+        <header className="sticky top-0 flex items-center bg-sidebar w-full shadow-[0_1px_0_0_rgba(0,0,0,0.05)]">
             <div className="flex h-(--header-height) w-full items-center">
                 <div className="min-w-(--sidebar-width) flex items-center justify-between px-2">
                     <Link href="/dashboard" className="flex items-center justify-center gap-2">
